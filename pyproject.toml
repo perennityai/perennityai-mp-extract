@@ -1,0 +1,58 @@
+
+
+[project]
+name = "perennityai-mp-extract"
+
+version = "0.1.0"  # Developmental release (add .dev#) # is icrementable number
+description = "A tool for extracting gesture landmarks and metadata from videos and saving them to disk using MediaPipe."
+authors = [
+    { name = "Perennity AI", email = "info@perennityai.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }  # Include a reference to the LICENSE file here
+dependencies = [
+        'tensorflow>=2.5.0,<=2.17.0', 
+        "tensorboard>=2.5.0,<=2.17.0",
+        "keras",
+        'matplotlib',
+        "matplotlib",
+        "opencv-python",
+        "json5 ",
+        "pandas",
+        "mediapipe",
+        "yt_dlp"
+]
+
+requires-python = ">=3.8"
+
+keywords = ["mediapipe", "data visualization", "landmarks", "pose", "AI"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/perennityai/perennityai-mp-extract"
+"Documentation" = "https://github.com/perennityai/perennityai-mp-extract/blob/main/README.md"
+"Issue Tracker" = "https://github.com/perennityai/perennityai-mp-extract/issues"
+
+[project.scripts]
+perennityai-mp-extract = "perennityai_mp_extract.main:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = { find = { where = ["src"] } }
+
+[build-system]
+requires = ["setuptools>=61.0",  "wheel"]
+build-backend = "setuptools.build_meta"
+
+

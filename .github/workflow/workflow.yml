@@ -1,0 +1,46 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # Specify Python version
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Build project
+      run: |
+        python setup.py sdist bdist_wheel
+
+    - name: Upload artifact (Optional)
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist-files
+        path: dist/*
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: "YOUR_AZURE_APP_NAME"         # Replace with your Azure Web App name
+        slot-name: "production"                 # Default slot is 'production'
+        publish-profile: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Verify deployment
+      run: |
+        echo "Deployment complete."
+        curl https://YOUR_AZURE_APP_NAME.azurewebsites.net  # Optional verification of deployment
