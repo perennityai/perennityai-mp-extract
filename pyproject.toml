@@ -3,7 +3,7 @@
 [project]
 name = "perennityai-mp-extract"
 
-version = "0.1.0.dev1"  # Developmental release (add .dev#) # is icrementable number
+version = "0.1.0"  # Developmental release (add .dev#) # is icrementable number
 description = "A tool for extracting gesture landmarks and metadata from videos and saving them to disk using MediaPipe."
 authors = [
     { name = "Perennity AI", email = "info@perennityai.com" }

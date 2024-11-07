@@ -1,12 +1,12 @@
 # PerennityAI MediaPipe Face, Pose, and Hands Landmarks Extractor
-```perennityai-mp-extract``` is a powerful tool designed to help developers and researchers easily extract hand, face, and pose landmarks from video files. By leveraging state-of-the-art MediaPipe models, this tool simplifies the process of obtaining precise gesture data, enabling the development of advanced touchless human-computer interaction (HCI) systems, gesture recognition models, and more.
+```perennityai-mp-extract``` is a tool designed to help developers and researchers easily extract hand, face, and pose landmarks from video files. By leveraging state-of-the-art MediaPipe models, this tool simplifies the process of obtaining precise gesture data, enabling the development of advanced touchless human-computer interaction (HCI) systems, gesture recognition models, and more.
 
 With a user-friendly interface, perennityai-mp-extract allows users to process videos at a specified frame rate, providing flexibility to extract the data in various formats, including CSV, JSON, TFRecord, or Parquet. Whether you're working on sign language recognition, gesture-based controls, or any other HCI project, this tool streamlines the extraction of key visual data points, making it easier to integrate gesture analysis into your applications.
 
 ## Key Features:
 
 - Hand, Face, and Pose Landmark Extraction: Leverages MediaPipe to extract detailed landmarks for hand gestures, facial expressions, and body poses.
-- Flexible Output Formats: Save the extracted data in CSV, JSON, TFRecord, or Parquet formats for easy integration with machine learning workflows.
+- Flexible Output Formats: Save the extracted data in CSV, TFRecord, or Parquet formats for easy integration with machine learning workflows.
 - Customizable Frame Rate: Extract data at your preferred frame rate for accurate analysis.
 - Robust Logging: Integrated logging functionality for monitoring and debugging extraction processes.
 - Easy Integration: Easily integrates into existing data pipelines and research projects.
@@ -91,13 +91,16 @@ pip install -r requirements.txt
 python main.py --input_file https://www.example.com/23/23781.mp4 --output_dir ./path/to/storage --output_format csv --label gift --verbose DEBUG 
 ```
 
-```python
+```bash
 
 conda create --name mp-extract-env python=3.8
 
 conda activate mp-extract-env
 
 pip install perennityai-mp-extract
+```
+
+```python
 from perennityai_mp_extract.data_extraction.data_extractor import DataExtractor
 
 # Usage Example: Load from a pretrained configuration file

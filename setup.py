@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='perennityai-mp-extract',
-    version='0.1.0.dev1',  # Developmental release (devN)
+    version='0.1.0',  # Developmental release (devN)
     author='Perennity AI',
     author_email='info@perennityai.com',
     description = "A tool for extracting gesture landmarks and metadata from videos and saving them to disk using MediaPipe.",
