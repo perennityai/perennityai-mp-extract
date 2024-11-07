@@ -1,0 +1,15 @@
+# Include all data files (CSV, TFRecord, config files, etc.)
+recursive-include src/perennityai_mp_extract/data_extraction *.py
+recursive-include src/utils *.py
+recursive-include src/perennityai_mp_extract/configs *.json
+recursive-include src/perennityai_mp_extract/configs *.yml
+recursive-include src/perennityai_mp_extract/configs *.ini
+
+# Include README and LICENSE files
+include README.md
+include LICENSE
+
+# Include any other specific files
+include setup.py
+include pyproject.toml
+include MANIFEST.in
