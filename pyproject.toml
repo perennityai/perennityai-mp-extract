@@ -1,7 +1,7 @@
 
 
 [project]
-name = "perennityai-feature-engine"
+name = "perennityai-mp-extract"
 
 version = "0.1.0"  # Developmental release (add .dev#) # is icrementable number
 description = "A tool for extracting gesture landmarks and metadata from videos and saving them to disk using MediaPipe."
@@ -40,12 +40,12 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/perennityai/perennityai-feature-engine"
-"Documentation" = "https://github.com/perennityai/perennityai-feature-engine/blob/main/README.md"
-"Issue Tracker" = "https://github.com/perennityai/perennityai-feature-engine/issues"
+"Homepage" = "https://github.com/perennityai/perennityai-mp-extract"
+"Documentation" = "https://github.com/perennityai/perennityai-mp-extract/blob/main/README.md"
+"Issue Tracker" = "https://github.com/perennityai/perennityai-mp-extract/issues"
 
 [project.scripts]
-perennityai-feature-engine = "perennityai_feature_engine.main:main"
+perennityai-mp-extract = "perennityai_mp_extract.main:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
