@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='perennityai-mp-extract',
+    name='perennityai-feature-engine',
     version='0.1.0',  # Developmental release (devN)
     author='Perennity AI',
     author_email='info@perennityai.com',
     description = "A tool for extracting gesture landmarks and metadata from videos and saving them to disk using MediaPipe.",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/perennityai/perennityai-mp-extract',
+    url='https://github.com/perennityai/perennityai-feature-engine',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     classifiers=[
@@ -38,7 +38,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'perennityai-mp-extract = perennity_mp_extract.main:main',
+            'perennityai-feature-engine = perennity_mp_extract.main:main',
         ],
     },
     include_package_data=True,

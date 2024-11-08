@@ -1,4 +1,4 @@
-# perennityai_mp_extract/__init__.py
+# perennityai_feature_engine/__init__.py
 
 """
 Module Name: perennityai-mp-extract
@@ -15,7 +15,7 @@ This module contains the definition of perennityai-mp-extract.
 __version__ = "1.0.0"
 
 # Import all modules
-from perennityai_mp_extract.data_extraction import DataExtractor
+from perennityai_feature_engine.data_extraction import DataExtractor
 
 # public classes that are available at the sub-package level
 __all__ = [

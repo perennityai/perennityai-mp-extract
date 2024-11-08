@@ -36,6 +36,18 @@ perennity-mp-extract/
 │       ├── __init__.py               # Initializes the package/module
 │       ├── main.py                   # Entry point for running the program
 │       │
+│       ├── featureengineering/        # Utilities folder (for helpers, etc.)
+│       │   ├── __init__.py           # Initializes utils module
+│       │   ├── pose_features_processor.py        # Handles CSV file operations
+│       │   ├── hand_feature_processor.py # Handles TFRecord file operations
+│       │   ├── facial_features_processor.py     # The points labels for all landmarks
+│       │   └── feature_extractor.py             # Logger configuration and functions
+│       │
+│       ├── preprocessing/        # Utilities folder (for helpers, etc.)
+│       │   ├── __init__.py           # Initializes utils module
+│       │   ├── feature_processor.py        # Handles CSV file operations
+│       │   └── preperocessor.py             # Logger configuration and functions
+|       |
 │       ├── utils/                    # Utilities folder (for helpers, etc.)
 │       │   ├── __init__.py           # Initializes utils module
 │       │   ├── csv_handler.py        # Handles CSV file operations
@@ -101,7 +113,7 @@ pip install perennityai-mp-extract
 ```
 
 ```python
-from perennityai_mp_extract.data_extraction.data_extractor import DataExtractor
+from perennityai_feature_engine.data_extraction.data_extractor import DataExtractor
 
 # Usage Example: Load from a pretrained configuration file
 
